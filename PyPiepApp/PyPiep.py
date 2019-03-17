@@ -8,36 +8,33 @@ import tkinter
 import mysql.connector
 
 hostname="hannl-hlo-bioinformatica-mysqlsrv.mysql.database.azure.com"
-dummyuser = "@hannl-hlo-bioinformatica-mysqlsrv"
 
 
 class PyPiepGUI:
 
     def __init__(self):
-
         self.main_window = tkinter.Tk()
         self.main_window.title("PyPiep Release Candidate")
-        self.frame0 = tkinter.Frame(self.main_window,height=100)
+        self.frame0 = tkinter.Frame(self.main_window,height=100,bg="darkgray")
         self.frame0.pack()
-
-        self.frame1 = tkinter.Frame(self.main_window, height=100,bg="green")
+        self.frame1 = tkinter.Frame(self.main_window, height=100,bg="lightgray")
         self.frame1.pack()
         self.frame2 = tkinter.Frame(self.main_window, height=500,width=500)
         self.frame2.pack()
         self.user_var = StringVar()
         self.passw_var = StringVar()
-        self.ulabel = tkinter.Label(self.frame0,text="Username")
+        self.ulabel = tkinter.Label(self.frame0,text="Username",bg="darkgray")
         self.ulabel.pack(padx=5, pady=10, side=LEFT)
         self.user = tkinter.Entry(self.frame0,textvariable=self.user_var)
         self.user.pack(padx=5, pady=10, side=LEFT)
-        self.plabel = tkinter.Label(self.frame0,text="Password")
+        self.plabel = tkinter.Label(self.frame0,text="Password",bg="darkgray")
         self.plabel.pack(padx=5, pady=10, side=LEFT)
 
         self.passw = tkinter.Entry(self.frame0, textvariable=self.passw_var,show="*")
         self.passw.pack(padx=5, pady=10, side=LEFT)
 
         self.my_button = tkinter.Button(self.frame1, text='Ververs',
-                                        fg = "#c0c0c0", bg = "green",
+                                        fg = "black", bg = "darkgray",
                                         command=self.lees_berichten)
         self.label = tkinter.Label(self.frame1,text="Filter:")
         self.label.pack(padx=5, pady=10, side=LEFT)
