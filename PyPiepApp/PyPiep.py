@@ -3,7 +3,7 @@
 Voorbeeld van GUI
 Creatie d.d. 15 maart 2019
 """
-from tkinter import filedialog, Scrollbar, Y, END, StringVar, RIGHT, LEFT, RIDGE, TOP,X,Y,Frame,Label,Entry,Button
+from tkinter import Scrollbar, Y, END, StringVar, RIGHT, LEFT, Y
 import tkinter
 import mysql.connector
 
