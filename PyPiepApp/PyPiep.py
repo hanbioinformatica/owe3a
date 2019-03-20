@@ -29,10 +29,8 @@ class PyPiepGUI:
         self.user.pack(padx=5, pady=10, side=LEFT)
         self.plabel = tkinter.Label(self.frame0,text="Password",bg="darkgray")
         self.plabel.pack(padx=5, pady=10, side=LEFT)
-
         self.passw = tkinter.Entry(self.frame0, textvariable=self.passw_var,show="*")
         self.passw.pack(padx=5, pady=10, side=LEFT)
-
         self.my_button = tkinter.Button(self.frame1, text='Ververs',
                                         fg = "black", bg = "darkgray",
                                         command=self.lees_berichten)
@@ -50,7 +48,6 @@ class PyPiepGUI:
                                  yscrollcommand = self.scrollbar.set)
         self.text.pack()
         self.scrollbar.config(command=self.text.yview)
-
         tkinter.mainloop()
 
 
